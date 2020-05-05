@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-zengarden-publish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds a publish flag to all pages.",
   "main": "index.js",
   "scripts": {

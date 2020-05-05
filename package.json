@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-plugin-zengarden-publish",
+  "version": "1.0.0",
+  "description": "Adds a publish flag to all pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuepress",
+    "vuepress-plugin",
+    "zengarden"
+  ],
+  "author": "Thomas Venturini <thomas@venturini.codes>",
+  "license": "MIT"
+}

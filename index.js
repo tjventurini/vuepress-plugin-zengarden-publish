@@ -6,8 +6,8 @@ module.exports = (options, context) => {
      * The function that sets the flag to true or false. Can be overwritten
      * by the configuration in the theme.
      */
-    let publishFunction = options.publish || function(date) {
-        return dayjs().format('YYYY-MM-DD') >= dayjs(date).format('YYYY-MM-DD')
+    let publishFunction = options.publish || function(page) {
+        return dayjs().format('YYYY-MM-DD') >= dayjs(page.frontmatter.date).format('YYYY-MM-DD')
     }
 
     return {
@@ -33,7 +33,7 @@ module.exports = (options, context) => {
             if (typeof frontmatter.publish == 'undefined') {
                 // if there is a date
                 if (frontmatter.date) {
-                    frontmatter.publish = publishFunction(frontmatter.date)
+                    frontmatter.publish = publishFunction($page)
                 }
                 // otherwise we can set publish to true anyways
                 else {
